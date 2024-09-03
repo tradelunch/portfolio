@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/tio/Documents/01_omscs/cs6210_AOS/03_project1/project1_template/cpu/src",
+      "program": "/Users/tio/Documents/01_omscs/cs6210_AOS/03_project1/project1_template/cpu/src/build/Debug/outDebug"
+    }
+  ]
+}
