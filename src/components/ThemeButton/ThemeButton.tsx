@@ -25,7 +25,7 @@ export const ThemeButton = (props: Props) => {
         setTheme(isDark ? Theme.light : Theme.dark);
     };
 
-    const matches = useMediaQuery('(prefers-color-scheme: dark)');
+    const { matches } = useMediaQuery('(prefers-color-scheme: dark)');
     console.log({
         themes,
         theme,
