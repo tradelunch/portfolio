@@ -4,9 +4,14 @@ import i18n from './i18n.config.mjs';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    // output: 'export',
+    // async exportPathMap(defaultPathMap) {
+    //     return {
+    //         ...defaultPathMap,
+    //         '/sitemap.xml': { page: '/sitemap.xml' }, // Map the sitemap route
+    //     };
+    // },
     webpack: (config, options) => {
-        config.output = 'export';
-
         config.module.rules.push({
             test: /\.(pdf)$/,
             type: 'asset/resource',

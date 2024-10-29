@@ -3,11 +3,11 @@ import type { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
         {
-          url: 'https://intothedeep.github.com',
-          lastModified: new Date(),
-          changeFrequency: 'yearly',
-          priority: 1,
-        },
+            url: 'https://intothedeep.github.com',
+            lastModified: new Date().toISOString(), // Ensure ISO string format
+            changeFrequency: 'yearly',
+            priority: 1,
+          },
         // {
         //   url: 'https://acme.com/about',
         //   lastModified: new Date(),
@@ -64,4 +64,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
 //       <priority>1.0</priority>
 //     </url>
 //   </urlset>`;
+// }
+
+// app/sitemap.xml/page.tsx
+// export const dynamic = "force-static";
+// export const revalidate = 3600; // Optional: Set revalidation
+
+// export default function Sitemap() {
+//     return new Response(
+//         `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+//             <url>
+//                 <loc>https://intothedeep.github.id/</loc>
+//             </url>
+//         </urlset>`,
+//         {
+//             headers: {
+//                 'Content-Type': 'application/xml',
+//             },
+//         },
+//     );
 // }
