@@ -27,20 +27,21 @@ export const Resume = (props: Props) => {
                     'bg-white dark:bg-zinc-800',
                 )}
             >
-                <div className={clsx('flex flex-1 justify-between')}>
+                {/* <div className={clsx('flex flex-1 justify-between')}>
                     <h1 className={clsx('text-base')}>Taek Lim</h1>
                     <div className={clsx('text-xs')}>
                         <div>tio.taek.lim@gmail.com</div>
                         <div>github.com/tradelunch</div>
                     </div>
                     <div>Java, Javascript, spring</div>
-                </div>
+                </div> */}
+                <embed
+                    src={'/v1/pdf/resume.pdf'}
+                    // width="800px"
+                    // height=""
+                    className={clsx('flex-1')}
+                />
             </article>
-            {/* <embed
-		src={'/pdf/resume.pdf'}
-		width="800px"
-		height=""
-	/> */}
         </section>
     );
 };

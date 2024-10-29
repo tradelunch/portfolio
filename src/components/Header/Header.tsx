@@ -53,24 +53,24 @@ const Header = (props: Props) => {
                             to={ROUTES[Menu.ABOUT]}
                         />
                     </li> */}
-                    <li>
+                    {/* <li>
                         <NavItem
                             name={Menu.PROJECTS}
                             to={ROUTES[Menu.PROJECTS]}
                         />
-                    </li>
-                    <li>
+                    </li> */}
+                    {/* <li>
                         <NavItem
                             name={Menu.EDUCATION}
                             to={ROUTES[Menu.EDUCATION]}
                         />
-                    </li>
-                    <li>
+                    </li> */}
+                    {/* <li>
                         <NavItem
                             name={Menu.WORK}
                             to={ROUTES[Menu.WORK]}
                         />
-                    </li>
+                    </li> */}
                     <li>
                         <NavItem
                             name={Menu.RESUME}
