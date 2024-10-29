@@ -65,3 +65,10 @@ Error: Failed to collect page data for /sitemap.xml
   type: 'Error'
 }
 ```
+
+### Branch "prod" is not allowed to deploy to github-pages due to environment protection rules.
+
+1. repo Settings
+2. Environments
+3. Code and automation > Deployment branches and tags
+4. update 1 branch and 0 tags allowed
