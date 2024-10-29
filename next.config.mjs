@@ -5,6 +5,8 @@ import i18n from './i18n.config.mjs';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     webpack: (config, options) => {
+        config.output = 'export';
+
         config.module.rules.push({
             test: /\.(pdf)$/,
             type: 'asset/resource',
@@ -29,7 +31,7 @@ export default nextConfig;
 const updateSVGR = (config) => {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
-        rule.test?.test?.('.svg')
+        rule.test?.test?.('.svg'),
     );
 
     config.module.rules.push(
@@ -47,7 +49,7 @@ const updateSVGR = (config) => {
                 not: [...fileLoaderRule.resourceQuery.not, /url/],
             }, // exclude if *.svg?url
             use: ['@svgr/webpack'],
-        }
+        },
     );
 
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
