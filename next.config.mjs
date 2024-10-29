@@ -4,13 +4,7 @@ import i18n from './i18n.config.mjs';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // output: 'export',
-    // async exportPathMap(defaultPathMap) {
-    //     return {
-    //         ...defaultPathMap,
-    //         '/sitemap.xml': { page: '/sitemap.xml' }, // Map the sitemap route
-    //     };
-    // },
+    output: 'export',
     webpack: (config, options) => {
         config.module.rules.push({
             test: /\.(pdf)$/,
