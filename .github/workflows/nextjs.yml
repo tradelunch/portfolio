@@ -25,16 +25,22 @@ concurrency:
     cancel-in-progress: false
 
 jobs:
-    # test-job1:
-    #     runs-on: ubuntu-latest
-    # test-job2:
-    #     needs: [test-job1]
-    #     runs-on: ubuntu-latest
-
-    # Build job
-    build:
+    # pre work before building a job
+    prebuild:
         runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name: Commit message
+              run: |
+                  echo "Commit message: ${{ github.event.head_commit.message }}"
+                  echo "contains deploy: ${{ contains(github.event.head_commit.message, 'deploy') }}"
+    
+                  # Build job
+    build:
+        needs: [prebuild]
         if: ${{ contains(github.event.head_commit.message, 'deploy') }}
+        runs-on: ubuntu-latest
         steps:
             - name: Checkout
               uses: actions/checkout@v4
