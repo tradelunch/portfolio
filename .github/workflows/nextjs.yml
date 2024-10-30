@@ -25,12 +25,11 @@ concurrency:
     cancel-in-progress: false
 
 jobs:
-    test-job1:
-        runs-on: ubuntu-latest
-        if: ${{ 1 == 2 }}
-    test-job2:
-        needs: [test-job1]
-        runs-on: ubuntu-latest
+    # test-job1:
+    #     runs-on: ubuntu-latest
+    # test-job2:
+    #     needs: [test-job1]
+    #     runs-on: ubuntu-latest
 
     # Build job
     build:
